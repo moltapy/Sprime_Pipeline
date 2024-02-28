@@ -5,7 +5,7 @@
 #.panel文件是一个包含样本的文本文件
 #file=../download/1000genome/integrated_call_samples_v3.20130502.ALL.panel
 #跑的是1kgmerge227
-file=/public/group_data/he_yuan/Sprime/Samplelists/Merge1KG/samples_all_TIB200_merge1kg.txt
+file=$0
 sample_file=../output/sample.txt
 outgroup_file=../output/outgroup.txt
 vcf_file_list=../output/vcf.file.list
