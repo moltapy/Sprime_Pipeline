@@ -1,15 +1,18 @@
 #! /bin/bash
 
-#hosts='p105|p106|p107|p108|p109|p110|p111|p112|p113|p114|p115|p116'
-
 #.panel文件是一个包含样本的文本文件
 #file=../download/1000genome/integrated_call_samples_v3.20130502.ALL.panel
-#跑的是1kgmerge227
-file=$0
+#一次只能包含一个subgroup和一个outgroup，所以要将其按照subgroup分别提取并撞到文件夹中，再分配任务并行
+#跑的是1kgmerge227,但是因为./.会报missing错误，先跑1KG
+file=/public/group_data/he_yuan/Sprime/Samplelists/Original/sample_all.txtonly1000g
 sample_file=../output/sample.txt
 outgroup_file=../output/outgroup.txt
 vcf_file_list=../output/vcf.file.list
-mkdir ../output/tmp
+if [ -d "../output/tmp"];then
+    echo "存在，跳过"
+else
+    mkdir ../output/tmp
+fi
 #分别将YRI、CHB提取出来形成samplelist。
 #grep -E "(YRI|CHB)" ${file} | cut -f1 > sample.txt
 #追加samplelist，file前后不能有{}
@@ -22,7 +25,7 @@ echo -n "" > $vcf_file_list
 for chr in {1..22}
 do
 #vcf=../download/1000genome/ALL.chr${chr}.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz
-vcf=/public/group_data/he_yuan/TIB_phased_200_ref_merge1kg/chrom_${chr}.vcf.gz
+vcf=/public/group_data/he_yuan/data/sekei/data_1kg/modern_v5b/chrom_${chr}.vcf.gz
 ovcf=../output/tmp/chr${chr}.vcf.gz
 echo ${ovcf} >> $vcf_file_list
 #只提取sample.txt中的样本，并保留双等位snp位点，使用INFO等注释加上，并将结果输出成为ovcf
