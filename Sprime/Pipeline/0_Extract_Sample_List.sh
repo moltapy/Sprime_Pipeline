@@ -4,8 +4,14 @@
 #file=../download/1000genome/integrated_call_samples_v3.20130502.ALL.panel
 #一次只能包含一个subgroup和一个outgroup，所以要将其按照subgroup分别提取并撞到文件夹中，再分配任务并行
 #跑的是1kgmerge227,但是因为./.会报missing错误，先跑1KG
-file=/public/group_data/he_yuan/Sprime/Samplelists/Original/sample_all.txtonly1000g
-sample_file=../output/sample.txt
+#外部传参首先要从1开始
+#file=/public/group_data/he_yuan/Sprime/Samplelists/Original/sample_all.txtonly1000g
+file= $1
+subgroup_file=../output/subgroup.txt
+awk '{print $2}' $file | sort | uniq > $subgroup_file
+while IFS= read -r line; do
+    mkdir "$line"
+done < $subgroup_file
 outgroup_file=../output/outgroup.txt
 vcf_file_list=../output/vcf.file.list
 if [ -d "../output/tmp"];then

@@ -1,0 +1,96 @@
+mkdir: cannot create directory ‘../output/tmp’: File exists
+mkdir: cannot create directory ‘../output/tmp’: File exists
+0_Extract_Sample_List.sh: line 32: 663108 Broken pipe             bcftools view --samples-file ../output/sample.txt /public/group_data/he_yuan/TIB_phased_200_ref_merge1kg/chrom_1.vcf.gz
+     663109                       | bcftools view -c1 -m2 -M2 -v snps
+     663110 Killed                  | bcftools annotate -x INFO,^FORMAT/GT -Oz > ../output/tmp/chr1.vcf.gz
+0_Extract_Sample_List.sh: line 32: 663632 Broken pipe             bcftools view --samples-file ../output/sample.txt /public/group_data/he_yuan/TIB_phased_200_ref_merge1kg/chrom_2.vcf.gz
+     663633                       | bcftools view -c1 -m2 -M2 -v snps
+     663634 Killed                  | bcftools annotate -x INFO,^FORMAT/GT -Oz > ../output/tmp/chr2.vcf.gz
+mkdir: cannot create directory ‘../output/tmp’: File exists
+mkdir: cannot create directory ‘../output/tmp’: File exists
+Checking the headers of 22 files.
+Cannot use --naive, use --naive-force instead: different order the tag contig/1 in ../output/tmp/chr1.vcf.gz vs ../output/tmp/chr2.vcf.gz
+
+real	0m0.057s
+user	0m0.316s
+sys	0m1.348s
+sprime.jar(version: 20May22.855)
+Copyright (C) 2017 Brian L. Browning
+Enter "java -jar sprime.jar" to print a list ofcommand line arguments
+
+Start time: 11:41 AM HKT on 28 Feb 2024
+
+Command line: java -Xmx30688m -jar sprime.jar
+  gt=../output/final/all.auto.vcf.gz
+  outgroup=../output/outgroup.txt
+  map=../Data/GRCh37map/plink.all.GRch37.map
+  out=../output/sprime/chb.yri.1
+  chrom=1
+
+ERROR: VCF record has missing alleles: CHROM=1 POS=10505
+
+real	28m14.252s
+user	475m7.045s
+sys	5m37.629s
+sprime.jar(version: 20May22.855)
+Copyright (C) 2017 Brian L. Browning
+Enter "java -jar sprime.jar" to print a list ofcommand line arguments
+
+Start time: 12:10 PM HKT on 28 Feb 2024
+
+Command line: java -Xmx30688m -jar sprime.jar
+  gt=../output/final/all.auto.vcf.gz
+  outgroup=../output/outgroup.txt
+  map=../Data/GRCh37map/plink.all.GRch37.map
+  out=../output/sprime/chb.yri.2
+  chrom=2
+
+ERROR: VCF record has missing alleles: CHROM=2 POS=10180
+0_Extract_Sample_List.sh: line 10: [!: command not found
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr1.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr2.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr3.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr4.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr5.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr6.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr7.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr8.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr9.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr10.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr11.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr12.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr13.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr14.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr15.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr16.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr17.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr18.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr19.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr20.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr21.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr22.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 10: [!: command not found
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr1.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr2.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr3.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr4.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr5.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr6.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr7.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr8.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr9.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr10.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr11.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr12.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr13.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr14.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr15.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr16.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr17.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr18.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr19.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr20.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr21.vcf.gz: No such file or directory
+0_Extract_Sample_List.sh: line 32: ../output/tmp/chr22.vcf.gz: No such file or directory
+bash: 0_Extract_Sample_List.sh: No such file or directory
+0_Extract_Sample_List.sh: line 10: [: missing `]'
