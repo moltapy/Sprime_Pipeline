@@ -40,3 +40,9 @@ https://download.oracle.com/java/17/archive/jdk-17.0.10_linux-aarch64_bin.tar.gz
   3. output文件夹用于存放Sprime运行的结果`.score`文件和于古人信息比对后生成的`.mscore`文件，如果正常运行，output文件夹会包含一个subpops文件夹和一个包含所有子群体的subgroup.txt文件，以及一个包含所有外类群个体信息的outgroup.txt文件。在subpops文件夹中，是每个子群体的结果文件夹，以每个子群体的名字命名，比如ACB，里面包含final、match、sprime_output四个结果文件夹和此群体的vcf.gz文件，以及此群体和outgroup拼接起来的sample.txt还有一个提示vcf文件的vcf.file.list.
   4. Pipeline文件夹中是Sprime运行的过程中的所有shell脚本，按照首字母顺序从小到大依次运行，当然也可以自己写一个workflow串联这些脚本
   5. tools文件夹中是后面mapping所需要使用的工具和画图的R脚本。
+
+2. 脚本中有注释可以参考，具体脚本是干什么的可以翻译一下脚本名字。 
+
+3. 文件和数据可以参照Sprime的Protocol,我的文件夹中只带了一个hg19版的map。
+
+*Good Luck!*
