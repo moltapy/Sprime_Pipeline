@@ -17,7 +17,7 @@ https://download.oracle.com/java/17/archive/jdk-17.0.10_linux-aarch64_bin.tar.gz
 ```shell
     vi ~/.bashrc
 ```
-然后在文件末尾添加：
+- 然后在文件末尾添加：
 ```shell
     export JAVA_HOME=~/java/jdk-17.0.10_linux-aarch64_bin   
     export PATH=$PATH:$JAVA_HOME/bin
