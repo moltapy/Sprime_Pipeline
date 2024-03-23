@@ -37,22 +37,22 @@ https://download.oracle.com/java/17/archive/jdk-17.0.10_linux-aarch64_bin.tar.gz
 ### Spirme 运行脚本介绍
 
 1. 文件夹结构：
-    1. 整体结构是整个Sprime文件夹作为父文件夹，里面包含Data、output、Piprline、Samplelists和tools五个文件夹
-    2. Data文件夹用于存放vcf数据和下载的map数据文件
-    3. output文件夹用于存放Sprime运行的结果和产生的中间文件。
-        - 如果正常运行，output文件夹会包含一个subpops文件夹和一个包含所有子群体的subgroup.txt文件，以及一个包含所有外类群个体信息的outgroup.txt文件。
-        - 在subpops文件夹中，是每个子群体的结果文件夹，以每个子群体的名字命名，比如ACB，里面包含final、match、sprime_output、tmp四个结果文件夹和此群体的vcf.gz文件（22个），此群体和outgroup拼接起来的sample.txt文件还有一个提示vcf文件的`vcf.file.list`.
-          - `final`文件夹中是`all.auto.vcf.gz`文件，这个是将整个群体的vcf文件拼接起来的文件，用于后续处理
-        - `sprime_output`文件夹中是第2步Sprime运行的结果的`.score`文件和`log`文件,其中`.score`文件内容示例如下：
+    1. 整体结构是整个`Sprime`文件夹作为父文件夹，里面包含`Data`、`output`、`Piprline`、`Samplelists`和`tools`五个文件夹
+    2. `Data`文件夹用于存放vcf数据和下载的map文件
+    3. `output`文件夹用于存放`Sprime`运行的结果和产生的中间文件。
+        - 如果正常运行，`output`文件夹会包含一个`subpops`文件夹和一个包含所有子群体的`subgroup.txt`文件，以及一个包含所有外类群个体信息的`outgroup.txt`文件。
+        - 在`subpops`文件夹中，是每个子群体的结果文件夹，以每个子群体的名字命名，比如ACB，里面包含`final`、`match`、`sprime_output`、`tmp`四个结果文件夹和此群体的vcf.gz文件（22个），此群体和outgroup拼接起来的sample.txt文件还有一个提示vcf文件的`vcf.file.list`.
+            - `final`文件夹中是`all.auto.vcf.gz`文件，这个是将整个群体的vcf文件拼接起来的文件，用于后续处理
+            - `sprime_output`文件夹中是第2步Sprime运行的结果的`.score`文件和`log`文件,其中`.score`文件内容示例如下：
         ![score](./Src/Score_file_content.png)
-        - `match`文件夹是第3.5步完成后，`maparch`软件运行的结果（最终的数据结果文件），如果后续涉及到等高线图的绘制，绘制完成的等高线图也在match文件夹中，内容如下所示：
+            - `match`文件夹是第3.5步完成后，`maparch`软件运行的结果（最终的数据结果文件），如果后续涉及到等高线图的绘制，绘制完成的等高线图也在match文件夹中，内容如下所示：
         ![mscore](./Src/mScore_file_content.png)
-        - tmp文件夹中保存的是中间文件，在运行结束后应该是空文件夹
-    4. Pipeline文件夹中是Sprime运行的过程中的所有shell脚本，按照文件中首个数字的顺序从小到大依次运行，当然也可以自己写一个workflow串联这些脚本
-   5. tools文件夹中是后面mapping所需要使用的工具和画图的R脚本。
+            - tmp文件夹中保存的是中间文件，在运行结束后应该是空文件夹
+    4. `Pipeline`文件夹中是Sprime运行的过程中的所有shell脚本，按照文件中首个数字的顺序从小到大依次运行，当然也可以自己写一个workflow串联这些脚本
+    5. `tools`文件夹中是后面`mapping`所需要使用的工具maparch和画图的R脚本。
 
 2. 脚本中有注释可以参考，具体脚本是干什么的可以翻译一下脚本名字。 
 
-3. 文件和数据可以参照Sprime的Protocol,我的文件夹中只带了一个hg19版的map。
+3. 文件和数据的准备和下载可以参照Sprime的Protocol,我的文件夹中只带了一个hg19版的map。
 
 *Good Luck!*
