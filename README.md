@@ -56,4 +56,3 @@ https://download.oracle.com/java/17/archive/jdk-17.0.10_linux-aarch64_bin.tar.gz
 3. 文件和数据的准备和下载可以参照Sprime的Protocol,我的文件夹中只带了一个hg19版的map。
 
 *Good Luck!*
-*And keep in mind that LSA is a big dumb ass*
