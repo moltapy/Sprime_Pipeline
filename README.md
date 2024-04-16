@@ -55,4 +55,20 @@ https://download.oracle.com/java/17/archive/jdk-17.0.10_linux-aarch64_bin.tar.gz
 
 3. 文件和数据的准备和下载可以参照Sprime的Protocol,我的文件夹中只带了一个hg19版的map。
 
+### 关于 match archaic allele的步骤
+1. protocol示例代码使用了定长数组存储变量，对某些特殊情况（比如VCF文件中DP字段过长）的兼容性较差，过程无法正确执行，遂对其进行了一些改动，改动后使用string类和更大的buffer存储输入流，一定程度上能够兼容VCF文件信息比较不均一的情况，以及能够正确读取测序深度信息。
+2. maparch软件编译：
+- 首先检查Cmake版本号并修改CMakeLists.txt
+```cmake
+    cmake --version
+``` 
+- 然后进入`map_arch_genome`文件夹，运行以下代码
+```cmake
+    mkdir build
+    cd build
+    cmake ..
+    make
+```
+- 建议在编译之前浏览一遍源码的基本逻辑，并核查是否与需求和数据相一致。
+
 *Good Luck!*
