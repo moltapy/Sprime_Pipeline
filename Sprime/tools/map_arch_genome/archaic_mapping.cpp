@@ -121,7 +121,6 @@ int main(int argc,char *argv[])
     string ref,alt,DP,gt;
     string rm_1,rm_2,rm_3,rm_4,rm_5;
     archaic_gz = gzopen(vcf_file.c_str(),"rb");
-    cerr<<"kokowaii2"<<endl;
     if (archaic_gz == Z_NULL){
         cerr << "archaic VCF file cannot open, may missing" << vcf_file.c_str()<<endl;
         return -1;
