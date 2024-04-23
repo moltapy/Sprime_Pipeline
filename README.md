@@ -71,4 +71,7 @@ https://download.oracle.com/java/17/archive/jdk-17.0.10_linux-aarch64_bin.tar.gz
 ```
 - 建议在编译之前浏览一遍源码的基本逻辑，并核查是否与需求和数据相一致。
 
+### TIP
+- 这套流程所用的VCF文件中染色体号不包含```chr```，如果所使用的染色体号中有```chr```，需要注意修改shell脚本中的内容，并在score_summary.r中将chr的类型从numeric改成character,添加`chr=as.character(chr)`
+
 *Good Luck!*
