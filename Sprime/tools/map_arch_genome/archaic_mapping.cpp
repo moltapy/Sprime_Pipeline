@@ -166,7 +166,7 @@ int main(int argc,char *argv[])
         }
         else{
             //cerr<<data[pos][1]<<"\t"<<data[pos][2]<<"\t"<<SNP[k]<<endl;
-            if(SNP[k]^data[pos][1]==0 || SNP[k]^data[pos][2]==0) cout << ofs<<"match";
+            if(SNP[k]==data[pos][1] || SNP[k]==data[pos][2]) cout << ofs<<"match";
             else cout << ofs<<"mismatch";
             if(depth_options==1) cout <<ofs<<depth[pos];
             cout<<endl;
