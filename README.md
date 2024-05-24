@@ -1,5 +1,5 @@
 ## Sprime_workflow
-- 首先针对自己的集群介绍做一个简介：集群管理员尚且没有root权限只有sudo，集群也没有qsub任务提交系统所以Protocol的脚本不能直接使用，这里是一个自建的Sprime管线。
+- 首先针对自己的集群介绍做一个简介：集群是单主机，没有PBS。不能直接使用Protocol，这里是一个自建的Sprime管线。
 - Sprime项目源码传送门：https://github.com/browning-lab/sprime?tab=Apache-2.0-1-ov-file
 - Sprime项目Protocol传送门：https://github.com/YingZhou001/sprimepipeline
 ### Java环境安装和配置
