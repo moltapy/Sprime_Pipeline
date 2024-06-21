@@ -32,6 +32,7 @@
 ### Spirme 运行脚本介绍
 
 1. 文件夹结构：
+
     1. 整体结构是整个`Sprime`文件夹作为父文件夹，里面包含`Data`、`output`、`Piprline`、`Samplelists`和`tools`五个文件夹
     2. `Data`文件夹用于存放vcf数据和下载的map文件
     3. `output`文件夹用于存放`Sprime`运行的结果和产生的中间文件。
