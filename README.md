@@ -7,36 +7,27 @@
 
 ### Java环境配置
 检查是否已经配置好Java环境，如果第一次使用和为自己配置Java环境，参考以下步骤
-- 进入用户`home`目录并创建java文件夹，下载java压缩包并解压:
-```shell
+
+- 进入用户`home`目录并创建java文件夹，下载java压缩包，并解压:
+    ```shell
     mkdir ~/java
     cd ~/java
     wget https://download.oracle.com/java/17/archive/jdk-17.0.10_linux-aarch64_bin.tar.gz
-```
-- 将下载好的文件`jdk-17.0.10_linux-aarch64_bin.tar.gz`保存在`~/java`文件夹中，然后运行如下命令：
-```shell
-    cd ~/java
-    tar -zxvf jdk-17.0.10_linux-aarch64_bin.tar.gz
-    cd jdk-17.0.10_linux-aarch64_bin
-```
+    tar -zvxf jdk-17.0.10_linux-aarch64_bin.tar.gz
+    ```
+
 - 将Java的安装路径添加到环境变量中：
-```shell
+    ```shell
     vi ~/.bashrc
-```
-- 然后在文件末尾添加：
-```shell
     export JAVA_HOME=~/java/jdk-17.0.10_linux-aarch64_bin   
     export PATH=$PATH:$JAVA_HOME/bin
-```
-- 在终端重新刷新一遍环境变量：
-```shell
+    ```
+- 刷新环境变量并检查是否安装成功：
+    ```shell
     source ~/.bashrc
-```
-
-- 验证Java安装成功:
-```shell
     java -version
-```
+    ```
+    如果出现java版本号说明安装成功
 
 ### Spirme 运行脚本介绍
 
