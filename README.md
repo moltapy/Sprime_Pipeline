@@ -1,13 +1,17 @@
-## Sprime_workflow
-- 首先针对自己的集群介绍做一个简介：集群是单主机，没有PBS。不能直接使用Protocol，这里是一个自建的Sprime管线。
+# Sprime Pipeline
+
+## Sprime_Worst_Practice
+该Git是为了让Sprime更加用户友好而重置，不需要集群任务调度系统，并修复了Mapping步骤可能由于数组越界造成的错误，Sprime项目和Protocol链接如下：
 - Sprime项目源码传送门：https://github.com/browning-lab/sprime?tab=Apache-2.0-1-ov-file
 - Sprime项目Protocol传送门：https://github.com/YingZhou001/sprimepipeline
-### Java环境安装和配置
-- 集群管理员不提供全局安装Java服务，所以得自己从Java官网薅一个过来，网址如下：
-https://download.oracle.com/java/17/archive/jdk-17.0.10_linux-aarch64_bin.tar.gz
-- 通过`wget`或者在Windows上本地下载之后上传到集群，最好是在home目录新建一个文件夹保存：
+
+### Java环境配置
+检查是否已经配置好Java环境，如果第一次使用和为自己配置Java环境，参考以下步骤
+- 进入用户`home`目录并创建java文件夹，下载java压缩包并解压:
 ```shell
     mkdir ~/java
+    cd ~/java
+    wget https://download.oracle.com/java/17/archive/jdk-17.0.10_linux-aarch64_bin.tar.gz
 ```
 - 将下载好的文件`jdk-17.0.10_linux-aarch64_bin.tar.gz`保存在`~/java`文件夹中，然后运行如下命令：
 ```shell
