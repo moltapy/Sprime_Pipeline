@@ -2,9 +2,14 @@
 import subprocess
 try:
     import pyyaml
+    import tqdm
 except:
     subprocess.run("pip install pyyaml -i https://pypi.tuna.tsinghua.edu.cn/simple")
+    subprocess.run("pip install tpdm -i https://pypi.tuna.tsinghua.edu.cn/simple")
+
 import yaml
+import logging
+
 config_path = input("Input path of config file here, default to config:\n")
 if not config_path:
     config_path = "./config.yaml"
