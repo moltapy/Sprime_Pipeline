@@ -1,6 +1,7 @@
+bcftools_env_name: bcftools 
 workmem: 
-samplelist:
-modern_vcf:
-neand_vcf:
-deni_vcf:
-end:
+samplelist: 
+modern_vcf: 
+neand_vcf: 
+deni_vcf: 
+end_step:
